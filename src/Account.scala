@@ -9,11 +9,11 @@ class Account(Name: String, Age: Int, Email: String, Budget: Double) {
   var budget: Double = Budget
 
   def changeBudget (amount: Double): Double = {
-    if (amount <= budget) {
+    if (budget + amount >= 0) {
       budget += amount
       budget
     }
-    else sys.error("Budget to low")
+    else -1
   }
 
 }

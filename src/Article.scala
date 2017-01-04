@@ -14,26 +14,28 @@ trait Ticket extends Article{
   val ID: Long = System.currentTimeMillis
 }
 
-class Early_Bird(Name: String) extends Ticket{
+class Early_Bird(account: Account) extends Ticket{
   override val price: Double =  50
-  override val name: String = Name
+  override val name: String = account.name
   override val category: String = "Early_Bird"
 
 }
 
-class Normal(Name: String) extends Ticket{
+class Normal(account: Account) extends Ticket{
   override val price: Double =  100
-  override val name: String = Name
+  override val name: String = account.name
   override val category: String = "Normal"
 
 }
 
-class VIP(Name: String) extends Ticket{
+class VIP(account: Account) extends Ticket{
   override val price: Double =  200
-  override val name: String = Name
+  override val name: String = account.name
   override val category: String = "VIP"
 
 }
+
+/* ITEM */
 
 class Item(Item: String, Price: Double) extends Article{
   val item: String = Item
