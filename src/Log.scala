@@ -9,11 +9,11 @@ class Log {
   def addAction(action: String, time: String): Unit ={
     timeList = time :: timeList
     actionList = action :: actionList
-    showAction()
+    showLastAction()
 
   }
 
-  def showAction(): Unit ={
+  def showLastAction(): Unit ={
       println(timeList(0) + " --- " + actionList(0))
     }
 
