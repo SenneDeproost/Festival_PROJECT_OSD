@@ -3,12 +3,7 @@
   */
 
 /* Een Account bevat een naam, leeftijd, budget en email en wordt gebruikt om aankopen (lees: orders) te kunnen doen */
-class Account(Name: String, Age: Int, Email: String, Budget: Double) {
-
-  val name: String = Name
-  val age: Int = Age
-  val email: String = Email
-  var budget: Double = Budget
+class Account(val name: String, val age: Int, val email: String, var budget: Double) {
 
   def changeBudget (amount: Double): Double = {
     if (budget + amount >= 0) {

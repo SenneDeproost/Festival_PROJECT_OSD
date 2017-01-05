@@ -42,7 +42,6 @@ class VIP(Owner: String) extends Ticket{
 
 /* ITEM */
 /* Een item kan verschillende dingen voorstellen die door het festival geverifieerd moeten worden*/
-class Item(Item: String, Price: Double) extends Article{
-  val item: String = Item
+class Item(val item: String, Price: Double) extends Article{
   override val price: Double = Price
 }
