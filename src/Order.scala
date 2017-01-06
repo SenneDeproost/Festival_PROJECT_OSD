@@ -27,14 +27,14 @@ class Order {
   // ADD
   /* Hier wordt verschil gemaakt tusen het toevoegen van een ticket en het toevoegen van een item. */
 
-  def addItem(item: Item)= {
+  def addItem(item: Item): Unit = {
     bill += item.price
     items = item :: items
 
   }
 
 
-  def addTicket(ticket: Ticket)= {
+  def addTicket(ticket: Ticket): Unit = {
     bill += ticket.price
     tickets = ticket :: tickets
 
@@ -96,7 +96,7 @@ class Order {
 
   // SORTING
 
-  def sortList(a_list: Any)= {
+  def sortList(a_list: Any): Unit =  {
     if (a_list == items){
       items.sortWith(_.price > _.price)
     }

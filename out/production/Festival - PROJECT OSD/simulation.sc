@@ -27,9 +27,9 @@ O.addTicket(new VIP("Ann"))
 O.addTicket(new Normal("Senne Deproost"))
 O.addTicket(new Early_Bird("Gerard Trekvogel"))
 
-O.confirm(A)
+O.confirm(A) // Confirm order op account A
 
-// Order1 voor A1
+// Order 1 voor A1
 O1.addItem(cola)
 O1.addTicket(new VIP("Tim Trekvogel"))
 
