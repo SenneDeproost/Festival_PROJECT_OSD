@@ -41,11 +41,12 @@ class Order {
   }
 
   // CONFIRM
+  var non16: List[Ticket] = tickets.filter(_.category != "Early_bird")
 
   def confirm(account: Account): Unit = {
     check = 0 /* Reset de check. */
     /* Hulplijsten */
-    var non16: List[Ticket] = tickets.filter(_.category != "Early_bird")
+    var non16: List[Ticket] = tickets.filter(_.category != "Early_Bird")
     var listOfOwners: List[String] = tickets.map(_.owner)
     var listOfUniqueOwners: List[String] = listOfOwners.distinct
 
@@ -96,7 +97,7 @@ class Order {
 
   // SORTING
 
-  def sortList(a_list: Any): Unit =  {
+  def sortList(a_list: Any): Unit = {
     if (a_list == items){
       items.sortWith(_.price > _.price)
     }

@@ -17,6 +17,7 @@ trait Ticket extends Article{
   val category: String
   val owner: String
   val ID: Long = System.currentTimeMillis
+
 }
 
 final class Early_Bird(Owner: String) extends Ticket{
@@ -45,3 +46,4 @@ final class VIP(Owner: String) extends Ticket{
 class Item(val item: String, Price: Double) extends Article{
   override val price: Double = Price
 }
+

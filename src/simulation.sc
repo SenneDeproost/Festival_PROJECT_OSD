@@ -11,10 +11,10 @@ val A3 = new Account("Kleine Jan", 16, "Jan@mussenland.com", 9000 + 1)
 
 // Order
 val O = new Order
-val O1 = new Order()
-val O2 = new Order()
-val O3 = new Order()
-val O4 = new Order()
+val O1 = new Order
+val O2 = new Order
+val O3 = new Order
+val O4 = new Order
 
 
 // Order voor A
@@ -51,5 +51,5 @@ O3.confirm(A2) // Test of ticket met zelfde naam kan besteld worden
 
 // Order 4
 O4.addTicket(new Early_Bird("Timmy"))
-O4.addTicket(new VIP("Neo"))
+O4.addTicket(new Normal("Neo"))
 O4.confirm(A3) // Test of account de juiste leeftijd heeft voor tickets.
